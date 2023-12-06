@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Files/styles.css">
+    <title>Market</title>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Logo</div>
+            <ul class="menu">
+                <li><a href="#" onclick="showMain()">Asosiy</a></li>
+                <li><a href="#" onclick="showReport()">Hisobot</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="mainPage">
+        <form id="marketForm">
+            <label for="xaridorNomi">Xaridor nomi:</label>
+            <input type="text" id="xaridorNomi" required>
+
+            <label for="maxsulotNomi">Maxsulot nomi:</label>
+            <input type="text" id="maxsulotNomi" required>
+
+            <label for="maxsulotSoni">Maxsulot soni:</label>
+            <input type="number" id="maxsulotSoni" required>
+
+            <label for="maxsulotNarxi">Maxsulot narxi:</label>
+            <input type="number" id="maxsulotNarxi" required>
+
+            <label for="manzili">Manzili:</label>
+            <input type="text" id="manzili" required>
+
+            <button type="button" onclick="submitForm()">Saqlash</button>
+        </form>
+
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th>Xaridor nomi</th>
+                    <th>Maxsulot nomi</th>
+                    <th>Maxsulot soni</th>
+                    <th>Maxsulot narxi</th>
+                    <th>Jami narxi</th>
+                    <th>Manzili</th>
+                    <th>O'chirish</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Maxsulotlar jadvali bu yerni to'ldiring -->
+            </tbody>
+        </table>
+    </main>
+
+    <main id="reportPage" style="display: none;">
+        <h2>Hisobot</h2>
+        <table id="reportTable">
+            <!-- Hisobot jadvali bu yerni to'ldiring -->
+        </table>
+    </main>
+
+    <script src="./Files/xlsx.full.min.js"></script>
+    <script src="./Files/script.js"></script>
+</body>
+</html>
